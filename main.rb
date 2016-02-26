@@ -3,7 +3,8 @@ require 'sinatra/namespace'
 require 'json'
 
 get '/' do
-  'Welcome!'
+  status 202
+  body({ message: "Welcome!" }.to_json)
 end
 
 namespace '/api' do
